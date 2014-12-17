@@ -241,6 +241,33 @@
                         android:title="@string/pref_baud_type" />
                 </PreferenceCategory>
                 <PreferenceCategory
+                    android:key="pref_ssh"
+                    android:title="@string/pref_ssh" >
+                    <EditTextPreference
+                        android:defaultValue="11.0.0.1"
+                        android:gravity="center"
+                        android:key="@string/pref_ssh_ip_key"
+                        android:title="@string/pref_ssh_ip" />
+                    <EditTextPreference
+                        android:defaultValue="22"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:key="@string/pref_ssh_port_key"
+                        android:title="@string/pref_ssh_port" />
+                   <EditTextPreference
+                        android:defaultValue="root"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:key="@string/pref_ssh_user_key"
+                        android:title="@string/pref_ssh_user" />
+                   <EditTextPreference
+                        android:defaultValue=""
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:key="@string/pref_ssh_pass_key"
+                        android:title="@string/pref_ssh_pass" />
+                </PreferenceCategory>
+                <PreferenceCategory
                     android:key="pref_server"
                     android:title="@string/pref_server" >
                     <EditTextPreference

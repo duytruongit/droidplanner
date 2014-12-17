@@ -316,6 +316,11 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
         mDefaultSummaryPrefs.add(getString(R.string.pref_bluetooth_device_address_key));
         mDefaultSummaryPrefs.add(getString(R.string.pref_rc_quickmode_left_key));
         mDefaultSummaryPrefs.add(getString(R.string.pref_rc_quickmode_right_key));
+
+        mDefaultSummaryPrefs.add(getString(R.string.pref_ssh_port_key));
+        mDefaultSummaryPrefs.add(getString(R.string.pref_ssh_ip_key));
+        mDefaultSummaryPrefs.add(getString(R.string.pref_ssh_user_key));
+        mDefaultSummaryPrefs.add(getString(R.string.pref_ssh_pass_key));
     }
 
     /**
