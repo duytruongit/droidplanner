@@ -1,5 +1,8 @@
 //Android projects
 include ':Android'
+include ':Android:libs:OpenCV'
 
 //Library projects
 
+//include ':ice'
+//project(':ice').projectDir = new File('src/Ice')

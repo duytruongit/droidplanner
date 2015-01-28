@@ -9,6 +9,7 @@ import org.droidplanner.android.fragments.FlightMapFragment;
 import org.droidplanner.android.fragments.TelemetryFragment;
 import org.droidplanner.android.fragments.mode.FlightModePanel;
 import org.droidplanner.android.utils.prefs.AutoPanMode;
+import org.opencv.android.OpenCVLoader;
 
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
@@ -20,6 +21,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentManager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -35,6 +37,16 @@ import com.o3dr.services.android.lib.drone.attribute.AttributeEventExtra;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 public class FlightActivity extends DrawerNavigationUI {
+
+    private static final String TAG_OpenCV = "OpenCV:Alex";
+
+    static {
+        if (!OpenCVLoader.initDebug()){
+            Log.i(TAG_OpenCV, "Static linking ok");
+        }else{
+            Log.i(TAG_OpenCV, "static linking success");
+        }
+    }
 
     private static final String TAG = FlightActivity.class.getSimpleName();
 	private static final int GOOGLE_PLAY_SERVICES_REQUEST_CODE = 101;

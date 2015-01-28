@@ -1,6 +1,7 @@
 package org.droidplanner.android.activities;
 
 import org.droidplanner.android.R;
+import org.droidplanner.android.cameraStreaming.CameraStreaming_fragment;
 import org.droidplanner.android.fragments.ChecklistFragment;
 import org.droidplanner.android.fragments.ParamsFragment;
 import org.droidplanner.android.fragments.SensorSetupFragment;
@@ -81,6 +82,10 @@ public class ConfigurationActivity extends DrawerNavigationUI {
                 fragment = new ChecklistFragment();
                 break;
 
+            case R.id.navigation_cameraStreaming:
+                fragment = new CameraStreaming_fragment();
+                break;
+
             case R.id.navigation_params:
             default:
                 fragment = new ParamsFragment();
@@ -96,6 +101,9 @@ public class ConfigurationActivity extends DrawerNavigationUI {
         }
         else if(fragment instanceof ChecklistFragment){
             return R.id.navigation_checklist;
+        }
+        else if(fragment instanceof CameraStreaming_fragment){
+            return R.id.navigation_cameraStreaming;
         }
         else {
             return R.id.navigation_params;
